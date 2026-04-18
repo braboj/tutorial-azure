@@ -1,19 +1,21 @@
 site_name: "AZ-900 Study Guide — Code with Branko"
-site_description: "Complete Microsoft Azure Fundamentals (AZ-900) study guide — accessible edition"
-site_url: ""
+site_description: "Complete Microsoft Azure Fundamentals (AZ-900) study guide — accessible edition by Branko"
+site_url: https://braboj.github.io/tutorial-azure/
+repo_url: https://github.com/braboj/tutorial-azure
+repo_name: braboj/tutorial-azure
 
 theme:
   name: material
   palette:
     - scheme: default
-      primary: blue
-      accent: light blue
+      primary: indigo
+      accent: blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - scheme: slate
-      primary: blue
-      accent: light blue
+      primary: indigo
+      accent: blue
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
@@ -25,11 +27,47 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.footer
+    - navigation.indexes
     - search.suggest
     - search.highlight
     - content.code.copy
+    - content.tabs.link
   icon:
     repo: fontawesome/brands/github
+    logo: material/cloud
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - def_list
+  - tables
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/braboj
+      name: Branko on GitHub
+
+copyright: "&copy; 2026 Branimir Georgiev · Code with Branko"
+
+extra_css:
+  - stylesheets/extra.css
 
 nav:
   - Home: index.md
@@ -49,21 +87,3 @@ nav:
       - "11. Cost Management and Optimization": 11-cost-management.md
       - "12. AZ-900 Exam Preparation Guide": 12-exam-prep.md
   - Conclusion: conclusion.md
-
-plugins:
-  - search
-
-markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
-  - pymdownx.tabbed:
-      alternate_style: true
-  - admonition
-  - pymdownx.details
-  - attr_list
-  - md_in_html
-  - tables
-  - toc:
-      permalink: true
